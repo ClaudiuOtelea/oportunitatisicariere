@@ -1641,10 +1641,19 @@ header {
   padding: 3.2rem 2.4rem;
   background-color: #f7f7f7;
 }
+.join-us-section a:first-child {
+  text-decoration: underline;
+}
 .join-us-section h2 {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.4rem;
+}
+.join-us-section h2 span.green-join-us {
+  color: #48AFAB;
+}
+.join-us-section h2 span.blue-join-us {
+  color: #1D2B5D;
 }
 .join-us-section > h2 {
   inline-size: 60rem;
@@ -1759,6 +1768,128 @@ header {
 }
 .join-us-section .primary-btn, .join-us-section .job-btn {
   margin-top: 3rem;
+}
+
+.meeting-panel .meeting-segment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+.meeting-panel .meeting-segment .meeting-day {
+  font-size: 2.1rem;
+  text-transform: capitalize;
+  font-family: "Roboto";
+  width: 140px;
+  height: 80px;
+  border-left: 2px solid #2f7973;
+  border-right: 2px solid white;
+  border-bottom: none;
+  border-top: none;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  background: white;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.meeting-panel .meeting-segment .meeting-day:hover {
+  background: #2f7973;
+  border-right: 2px solid #2f7973;
+  color: white;
+}
+.meeting-panel .meeting-segment .meeting-day:focus {
+  background: #1e524e;
+  border-right: 2px solid #2f7973;
+  border-left: 2px solid #2f7973;
+  color: white;
+}
+.meeting-panel .meeting-segment .meeting-day.active {
+  background: #48AFAB;
+  border-color: #48AFAB;
+  color: #f3f3f3;
+  cursor: default;
+}
+.meeting-panel .meeting-segment .meeting-info {
+  position: relative;
+  width: 240px;
+  height: 136px;
+  border-left: 2px solid #2f7973;
+  border-right: 2px solid white;
+  border-bottom: none;
+  border-top: none;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  background: white;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  cursor: default;
+}
+.meeting-panel .meeting-segment .meeting-info span {
+  display: block;
+  font-size: 2.3rem;
+  margin: 2px 0;
+  font-weight: bold;
+  color: #2f7973;
+}
+.meeting-panel .meeting-segment .meeting-info span:first-of-type {
+  color: #000000;
+  font-size: 1.9rem;
+  letter-spacing: normal;
+}
+.meeting-panel .meeting-segment .meeting-info span:last-of-type {
+  color: #000000;
+  font-size: 2.9rem;
+}
+.meeting-panel .meeting-segment .meeting-info a {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 4px);
+  height: 100%;
+  background: #2f7973;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  font-size: 24px;
+  padding-top: 1.6rem;
+}
+.meeting-panel .meeting-segment .meeting-info a img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  width: 64px;
+  height: 65px;
+  margin: 6px auto 0;
+}
+.meeting-panel .meeting-segment .meeting-info a:focus {
+  background: #1e524e;
+}
+.meeting-panel .meeting-segment .meeting-info:hover a {
+  opacity: 1;
+}
+.meeting-panel .meeting-segment .meeting-info.active {
+  background: #48AFAB;
+  border-left: 2px solid #48AFAB;
+  border-right: 2px solid #48AFAB;
+}
+.meeting-panel .meeting-segment .meeting-info.active span {
+  color: white;
+}
+.meeting-panel .meeting-segment .meeting-info.active span:first-of-type {
+  color: #1D2B5D;
+}
+.meeting-panel .meeting-segment .meeting-info.active span:last-of-type {
+  color: #1D2B5D;
 }
 
 @media only screen and (max-width: 320px) {
@@ -2429,11 +2560,74 @@ footer .footer-bottom h4 {
   line-height: 2.4rem;
 }
 .jd__container .jd__body .list #email {
+  position: relative;
   width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
   -webkit-hyphens: auto;
           hyphens: auto;
+}
+.jd__container .jd__body .list #email a {
+  color: #2f7973;
+  font-weight: 600;
+  padding-right: 20px;
+}
+.jd__container .jd__body .list #email .copyMail {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  margin-left: -20px;
+  top: 2px;
+  right: 0;
+  cursor: pointer;
+}
+.jd__container .jd__body .list #email .copyMail .tooltip {
+  display: none;
+}
+.jd__container .jd__body .list #email .copyMail:hover .tooltip {
+  display: block;
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  white-space: pre;
+}
+.jd__container .jd__body .list #email .copyMail:hover .tooltip::after {
+  content: "";
+  position: absolute;
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+          clip-path: polygon(50% 100%, 0 0, 100% 0);
+  background: black;
+  width: 12px;
+  height: 6px;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.jd__container .jd__body .list #email .copyMail::after, .jd__container .jd__body .list #email .copyMail::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 14px;
+  right: 0px;
+  border: 1px solid #6b6b6b;
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.jd__container .jd__body .list #email .copyMail::before {
+  top: 20px;
+  left: 5px;
+  z-index: -1;
+  outline: 1px solid white;
 }
 .jd__container .jd__body .list > li {
   padding: 0.2rem;
