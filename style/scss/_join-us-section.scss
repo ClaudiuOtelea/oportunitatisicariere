@@ -27,10 +27,22 @@
   padding: 3.2rem 2.4rem;
   background-color: $greyish-white;
 
+  a:first-child{
+    text-decoration: underline;
+  }
+
   & h2 {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 3.4rem;
+
+    & span.green-join-us{
+      color: $green-join-us;
+    }
+
+    & span.blue-join-us{
+      color: $dark-blue-join-us;
+    }
   }
 
   >h2 {
@@ -155,6 +167,152 @@
     margin-top: 3rem;
   }
 }
+
+
+// Fata de design-ul din figma, am marit borderul de la 1 la 2 pixeli.
+// Marimea fontului nu este 100% cu cea din figma... nici 90% nu cred ca e...
+$border-width : 2px;
+
+@mixin common-join-us-elements{
+  border-left: $border-width solid $green-mint;
+  border-right: $border-width solid white;
+  border-bottom: none;
+  border-top: none;
+  box-shadow: 2px 2px 4px 0 rgba( 0, 0, 0, .25);
+  font-weight: bold;
+  background: white;
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
+
+.meeting-panel{
+
+  .meeting-segment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%;
+
+    .meeting-day{
+      font-size: 2.1rem;
+      text-transform: capitalize;
+      font-family: $roboto;
+      width: 140px;
+      height: 80px;
+      @include common-join-us-elements();
+      
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover{
+        background: $green-mint;
+        border-right: $border-width solid $green-mint;
+        color: white;
+      }
+
+      &:focus{
+        background: $dark-mint;
+        border-right: $border-width solid $green-mint;
+        border-left: $border-width solid $green-mint;
+        color: white;
+      }
+
+      &.active{
+        background: $green-join-us;
+        border-color: $green-join-us;
+        color: $white;
+        cursor: default;
+      }
+    }
+
+    .meeting-info{
+      position: relative;
+      // overflow: hidden;
+      width: 240px;
+      height: 136px;
+      @include common-join-us-elements();
+      margin: auto;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      cursor: default;
+
+      span{
+        display: block;
+        font-size: 2.3rem;
+        margin: 2px 0;
+        font-weight: bold;
+        color: $green-mint;
+
+        &:first-of-type{
+          color: $black;
+          font-size: 1.9rem;
+          letter-spacing: normal;
+        }
+        
+        &:last-of-type{
+          color: $black;
+          font-size: 2.9rem;
+        }
+      }
+
+      a{
+        opacity: 0;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + $border-width * 2);
+        height: 100%;
+        background: $green-mint;
+        border-radius: 15px;
+        transition: all .3s ease-in-out;
+        color: white;
+        font-size: 24px;
+        padding-top: 1.6rem;
+
+        img{
+          object-fit: contain;
+          display: block;
+          width: 64px;
+          height: 65px;
+          margin: 6px auto 0;
+        }
+
+        &:focus{
+          background: $dark-mint;
+        }
+
+      }
+
+      &:hover a{
+        opacity: 1;
+      }
+
+      &.active{
+        background: $green-join-us;
+        border-left: $border-width solid $green-join-us;
+        border-right: $border-width solid $green-join-us;
+
+        span{
+          color: white;
+          
+          &:first-of-type{
+            color: $dark-blue-join-us;
+          }
+          
+          &:last-of-type{
+            color: $dark-blue-join-us;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 @media only screen and (max-width: $phone-size) {
   .join-us-section {

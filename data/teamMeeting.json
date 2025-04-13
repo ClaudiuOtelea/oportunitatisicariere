@@ -1,0 +1,66 @@
+[
+    {
+        "valoare" : 1,
+        "ziua" : "Luni",
+        "grup": [{
+            "pentru" : "Echipa de",
+            "rol" : "BACK-END",
+            "ora" : "18:00",
+            "link" : "https://meet.jit.si/PEVIITOR.RO"
+        }]
+    },
+    {
+        "valoare" : 2,
+        "ziua" : "Marti",
+        "grup": [{
+            "pentru" : "Echipa de",
+            "rol" : "BACK-END",
+            "ora" : "18:00",
+            "link" : "https://meet.jit.si/PEVIITOR.RO"
+        }]
+    },
+    {
+        "valoare" : 3,
+        "ziua" : "Miercuri",
+        "grup": [
+            {
+                "pentru" : "Echipa de",
+                "rol" : "BACK-END",
+                "ora" : "18:00",
+                "link" : "https://meet.jit.si/PEVIITOR.RO"
+            },
+            {
+                "pentru" : "Echipa de",
+                "rol" : "DevOps",
+                "ora" : "18:15",
+                "link" : "https://meet.jit.si/PEVIITOR.RO"
+            },
+            {
+                "pentru" : "Prezentarea noilor",
+                "rol" : "VOLUNTARI",
+                "ora" : "20:45",
+                "link" : "https://meet.jit.si/PEVIITOR.RO"
+            }
+        ]
+    },
+    {
+        "valoare" : 4,
+        "ziua" : "Joi",
+        "grup": [{
+            "pentru" : "Echipa de",
+            "rol" : "BACK-END",
+            "ora" : "18:00",
+            "link" : "https://meet.jit.si/PEVIITOR.RO"
+        }]
+    },
+    {
+        "valoare" : 5,
+        "ziua" : "Vineri",
+        "grup": [{
+            "pentru" : "Echipa de",
+            "rol" : "BACK-END",
+            "ora" : "18:00",
+            "link" : "https://meet.jit.si/PEVIITOR.RO"
+        }]
+    }
+]

@@ -309,3 +309,86 @@ function redirectLinks() {
 }
 
 window.addEventListener("load", redirectLinks);
+
+
+// START SCRIPT TEAM MEETING... 
+// const meeting = document.querySelector(".meeting-panel");
+// const  segment = meeting.querySelectorAll(".meeting-segment");
+
+// const date = new Date();
+// const day = date.getDay();
+// const hour = date.getHours();
+// const minut = date.getMinutes();
+
+// function createMeetingButton(ziSaptamana, ziDinJSON) {
+//   let createDayButton = document.createElement('button');
+//   // aici am de modificat inainte sa urc
+//   if(ziSaptamana == day - 3){
+//     createDayButton.className = "meeting-day active";
+//   } else {
+//     createDayButton.className = "meeting-day";
+//   }
+//   createDayButton.innerHTML = ziDinJSON;
+
+//   return segment[0].appendChild(createDayButton);
+// }
+
+
+// const meetingButton = document.createElement('button');
+// meetingButton.className = "meeting-day";
+
+// const JSON_LINK = 'data/teamMeeting.json';
+// async function getMeetingInfo() {
+//   try {
+//     const response = await fetch(JSON_LINK);
+//     const data = await response.json();
+
+//     data.forEach(element => {
+//       createMeetingButton(element.valoare, element.ziua);
+//     });
+
+//     if(data[day-3] === undefined) {} else {
+//       const setDay = data[day-3];
+//       setDay.grup.forEach(el =>{
+//         createMeetingSchedule(el.pentru, el.rol, el.ora, el.link);
+//       })
+//     }
+
+//   } catch(err){
+//     console.log("Something went wrong with the fetch call !!!");
+//     console.log(err);
+//   }
+// }
+
+// function createMeetingSchedule( pentru, rol, ora, link){
+//   let createScheduleLink = document.createElement('div');
+//   createScheduleLink.className = "meeting-info";
+  
+//   // time(ora);
+
+//   createScheduleLink.innerHTML = `
+//     <span> ${pentru} </span>
+//     <span> ${rol} </span>
+//     <span> ${ora} </span>
+//     <a href="${link}" target="_blank"> PARTICIPA <img src="assets/round-table.svg" alt="meeting"></a>`;
+    
+//     return segment[1].appendChild(createScheduleLink);
+// } 
+
+// function time(e){
+//   const date = new Date();
+//   const hour = date.getHours();
+//   const minut = date.getMinutes();
+//   let actualTime = `${hour}:${minut}`;
+
+//   if(actualTime == e){
+//     createScheduleLink.classList.add('active');
+//   } else {
+//     console.log('false');
+//   }
+//   console.log(actualTime);
+//   console.log(e);
+//   setTimeout(time, 1000);
+// }
+
+// getMeetingInfo();
