@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("location").textContent += job.location;
         document.getElementById(
           "email"
-        ).innerHTML += `<a href="mailto:${job.aboutEmployer.email}">${job.aboutEmployer.email}</a><div class="copyMail"><span class="tooltip">Copy email</span></div>`;
+        ).innerHTML += `<a href="mailto:${job.aboutEmployer.email}">${job.aboutEmployer.email}</a><div class="copy-email"><span class="tooltip">Copy email</span></div>`;
         document.getElementById("address").textContent +=
           job.aboutEmployer.address;
         document

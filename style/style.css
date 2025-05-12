@@ -2572,7 +2572,7 @@ footer .footer-bottom h4 {
   font-weight: 600;
   padding-right: 20px;
 }
-.jd__container .jd__body .list #email .copyMail {
+.jd__container .jd__body .list #email .copy-email {
   position: relative;
   display: inline-block;
   width: 20px;
@@ -2582,10 +2582,10 @@ footer .footer-bottom h4 {
   right: 0;
   cursor: pointer;
 }
-.jd__container .jd__body .list #email .copyMail .tooltip {
+.jd__container .jd__body .list #email .copy-email .tooltip {
   display: none;
 }
-.jd__container .jd__body .list #email .copyMail:hover .tooltip {
+.jd__container .jd__body .list #email .copy-email:hover .tooltip {
   display: block;
   position: absolute;
   top: -45px;
@@ -2598,7 +2598,7 @@ footer .footer-bottom h4 {
   border-radius: 10px;
   white-space: pre;
 }
-.jd__container .jd__body .list #email .copyMail:hover .tooltip::after {
+.jd__container .jd__body .list #email .copy-email:hover .tooltip::after {
   content: "";
   position: absolute;
   -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -2611,7 +2611,7 @@ footer .footer-bottom h4 {
   left: 50%;
   transform: translateX(-50%);
 }
-.jd__container .jd__body .list #email .copyMail::after, .jd__container .jd__body .list #email .copyMail::before {
+.jd__container .jd__body .list #email .copy-email::after, .jd__container .jd__body .list #email .copy-email::before {
   content: "";
   position: absolute;
   z-index: -2;
@@ -2623,7 +2623,7 @@ footer .footer-bottom h4 {
   height: 10px;
   border-radius: 2px;
 }
-.jd__container .jd__body .list #email .copyMail::before {
+.jd__container .jd__body .list #email .copy-email::before {
   top: 5px;
   left: 5px;
   z-index: -1;
