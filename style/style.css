@@ -2576,7 +2576,7 @@ footer .footer-bottom h4 {
   position: relative;
   display: inline-block;
   width: 20px;
-  height: 30px;
+  height: 15px;
   margin-left: -20px;
   top: 2px;
   right: 0;
@@ -2588,7 +2588,7 @@ footer .footer-bottom h4 {
 .jd__container .jd__body .list #email .copyMail:hover .tooltip {
   display: block;
   position: absolute;
-  top: -32px;
+  top: -45px;
   left: 50%;
   transform: translateX(-50%);
   background: black;
@@ -2615,7 +2615,7 @@ footer .footer-bottom h4 {
   content: "";
   position: absolute;
   z-index: -2;
-  top: 14px;
+  top: 0px;
   right: 0px;
   border: 1px solid #6b6b6b;
   background: white;
@@ -2624,7 +2624,7 @@ footer .footer-bottom h4 {
   border-radius: 2px;
 }
 .jd__container .jd__body .list #email .copyMail::before {
-  top: 20px;
+  top: 5px;
   left: 5px;
   z-index: -1;
   outline: 1px solid white;

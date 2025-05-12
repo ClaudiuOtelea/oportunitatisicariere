@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .setAttribute("href", job.aboutEmployer.discord);
       }
           // copy email address button
-          const copyMail = document.querySelector('.copyMail');
+          const copyMail = document.querySelector('.copy-email');
           // copy email address event
           copyMail.addEventListener("click", (e) => {
             copyText = e.target.previousSibling.innerHTML;
